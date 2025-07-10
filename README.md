@@ -1,0 +1,1 @@
+Labs and exercises for [MIT Class 6.S184](https://diffusion.csail.mit.edu/): Flow Matching and Diffusion Models (2025)
