@@ -815,7 +815,10 @@ animate_dynamics(
 #
 # **Hint**: The probability density of the Gaussian $p(x) = N(0, \frac{\sigma^2}{2\theta})$ is given by $$p(x)  = \frac{\sqrt{\theta}}{\sigma\sqrt{\pi}} \exp\left(-\frac{x^2\theta}{\sigma^2}\right).$$
 #
-# **Your answer**:
+# **Your answer**: 
+#
+# Since $\log p(x) = \text{const} - \frac{\theta x^2}{\sigma^2}$, we have $\nabla \log p(x) = -\frac{2\theta}{\sigma^2}x$.
+#
 
 # %% [markdown]
 # **Your job**: Conclude that when $p(x) = N(0, \frac{\sigma^2}{2\theta})$, the Langevin dynamics 
@@ -824,3 +827,12 @@ animate_dynamics(
 # $$ dX_t = -\theta X_t\, dt + \sigma\, dW_t, \quad \quad X_0 = 0.$$
 #
 # **Your answer**:
+#
+# Using $\nabla \log p(x) = -\frac{2\theta}{\sigma^2}x$ in the Langevin dynamics gives
+#
+# $$
+# dX_t = \frac{1}{2}\sigma^2 \left(-\frac{2\theta}{\sigma^2}X_t\right)dt + \sigma\, dW_t = -\theta X_t\, dt + \sigma\, dW_t,
+# $$
+#
+# which is the Ornstein–Uhlenbeck process.
+#
